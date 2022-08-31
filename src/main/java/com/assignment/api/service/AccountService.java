@@ -3,7 +3,10 @@ package com.assignment.api.service;
 import java.io.Serializable;
 
 import com.assignment.api.entities.Account;
+import com.assignment.api.entities.Customer;
 
-public interface AccountService extends BaseService<Account, Serializable>{
+public interface AccountService extends BaseService<Account, Serializable> {
+
+	void createNewAccount(double initialCredit, Customer customer);
 
 }

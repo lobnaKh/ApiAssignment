@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.assignment.api.entities.Transaction;
 
-public interface TransactionService extends BaseService<Transaction, Serializable>{
+public interface TransactionService extends BaseService<Transaction, Serializable> {
 
+	Transaction createTransaction(Transaction transaction);
 }

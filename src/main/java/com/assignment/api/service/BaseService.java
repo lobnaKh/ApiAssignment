@@ -16,31 +16,21 @@ public interface BaseService<T, P extends Serializable> {
 
 	void deleteAll();
 
-	T getOne(P id);
+	Optional<T> findById(P id); 
 
 	<S extends T> S save(S entity);
 
-	int countEntities();
-
 	void delete(T entity);
-
-	void deleteAllInBatch();
 
 	List<T> findAll(Sort sort);
 
-	Optional<T> deleteById(Integer id);
-
-	<S extends T> List<S> save(List<S> entities);
 
 	<S extends T> S saveAndFlush(S entity);
 
-	Page<T> findAll(Pageable pageable);
 
 	<S extends T> boolean exists(Example<S> example);
 
 	<S extends T> List<S> findAll(Example<S> example);
-
-	void deleteInBatch(Iterable<T> entities);
 
 	<S extends T> List<S> findAll(Example<S> example, Sort sort);
 
