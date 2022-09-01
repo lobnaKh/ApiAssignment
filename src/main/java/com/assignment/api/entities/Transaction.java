@@ -13,11 +13,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
 @Table(name = "TRANSACTION")
 @Data
+@ToString
+@NoArgsConstructor
 public class Transaction extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;

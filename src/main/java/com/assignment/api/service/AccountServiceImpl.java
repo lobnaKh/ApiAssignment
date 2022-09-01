@@ -8,9 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.assignment.api.entities.Account;
 import com.assignment.api.entities.Customer;
-import com.assignment.api.entities.Transaction;
 import com.assignment.api.repositories.AccountRepository;
-
 
 @Service("accountService")
 @Transactional
@@ -18,7 +16,7 @@ public class AccountServiceImpl extends BaseServiceImpl<Account, Serializable> i
 
 	@Autowired
 	private AccountRepository accountRepository;
-	
+
 	@Autowired
 	private CustomerService customerService;
 
@@ -28,22 +26,10 @@ public class AccountServiceImpl extends BaseServiceImpl<Account, Serializable> i
 		account.setBalance(initialCredit);
 		account.setCustomer(customer);
 		Account savedAccount = accountRepository.save(account);
-		
+
 		customer.getAccounts().add(savedAccount);
 		customerService.save(customer);
-		/*
-		
-		if (initialCredit != 0) {
-			Transaction transaction = new Transaction();
-			Transaction createdTransaction = transactionService.createTransaction(transaction);
-			account.getTransactions().add(createdTransaction);
-			accountRepository.save(account);
-		}
-		*/
 		return savedAccount;
 	}
-	
-	
-	
 
 }

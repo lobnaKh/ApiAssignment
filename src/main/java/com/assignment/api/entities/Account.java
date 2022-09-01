@@ -17,11 +17,14 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
 @Table(name = "ACCOUNT")
 @Data
+@ToString
+@NoArgsConstructor
 public class Account extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
@@ -32,8 +35,7 @@ public class Account extends BaseEntity {
 	private int id;
 
 	private double balance;
-	
-	
+
 	@OneToMany
 	private List<Transaction> transactions = new ArrayList<>();
 

@@ -12,11 +12,15 @@ import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Table(name = "CUSTOMER")
 @Data
 @EqualsAndHashCode(callSuper = false)
+@ToString
+@NoArgsConstructor
 public class Customer extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;

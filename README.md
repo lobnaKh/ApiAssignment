@@ -32,6 +32,16 @@ mvn clean install
 OR 
 * run main ApiApplication
 ```
+4- View Swagger documentation of APIs :
+
+http://localhost:8080/swagger-ui.html
+
+5 - TEST ENDPOINT OF CREATING NEW ACCOUNT : 
+ POST http://localhost:8080/accounts
+ REQUEST BODY (JSON FORMAT) : customerId, initialCredit
+ 
+ 6 - TEST ENDPOINT OF GETTING USER INFORMATION : 
+ GET http://localhost:8080/customers/{id}
 
 ## Acknowledgments
 
