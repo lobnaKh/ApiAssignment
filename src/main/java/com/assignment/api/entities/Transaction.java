@@ -36,6 +36,14 @@ public class Transaction extends BaseEntity {
 	
 	@Column(name = "DESCRIPTION")
 	private String description;
+
+
+	public Transaction(double amount, Date date, String description) {
+		super();
+		this.amount = amount;
+		this.date = date;
+		this.description = description;
+	}
 	
 	
 

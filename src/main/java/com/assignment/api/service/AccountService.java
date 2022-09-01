@@ -7,6 +7,6 @@ import com.assignment.api.entities.Customer;
 
 public interface AccountService extends BaseService<Account, Serializable> {
 
-	void createNewAccount(double initialCredit, Customer customer);
+	Account createNewAccount(double initialCredit, Customer customer);
 
 }

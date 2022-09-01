@@ -14,6 +14,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 import lombok.ToString;
 
@@ -36,6 +38,7 @@ public class Account extends BaseEntity {
 	private List<Transaction> transactions = new ArrayList<>();
 
 	@ManyToOne(fetch = FetchType.LAZY)
+	@JsonIgnore
 	@JoinColumn(name = "FK_CUSTOMER_ID", foreignKey = @ForeignKey(name = "FK_CUSTOMER"))
 	@ToString.Exclude
 	private Customer customer;
