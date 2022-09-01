@@ -37,11 +37,16 @@ OR
 http://localhost:8080/swagger-ui.html
 
 5 - TEST ENDPOINT OF CREATING NEW ACCOUNT : 
+
  POST http://localhost:8080/accounts
- REQUEST BODY (JSON FORMAT) : customerId, initialCredit
  
- 6 - TEST ENDPOINT OF GETTING USER INFORMATION : 
+ REQUEST BODY (JSON FORMAT) : customerId (Type int), initialCredit (Type double)
+ 
+ 6 - TEST ENDPOINT OF GETTING USER INFORMATION :
+  
  GET http://localhost:8080/customers/{id}
+ 
+ PATH VARIABLE : id (Type int)
 
 ## Acknowledgments
 
