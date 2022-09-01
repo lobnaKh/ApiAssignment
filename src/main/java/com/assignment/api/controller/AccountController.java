@@ -6,21 +6,19 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.assignment.api.entities.Account;
 import com.assignment.api.entities.Customer;
-import com.assignment.api.entities.Transaction;
 import com.assignment.api.service.AccountService;
 import com.assignment.api.service.CustomerService;
 import com.assignment.api.service.TransactionService;
 
 @RestController
-public class CustomerController {
+public class AccountController {
 
 	@Autowired
 	private CustomerService customerService;
@@ -31,7 +29,7 @@ public class CustomerController {
 	@Autowired
 	private TransactionService transactionService;
 
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String hello() {
 		return "Welcome to Api Assignment";
 	}
